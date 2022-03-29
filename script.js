@@ -33,11 +33,13 @@ setInterval(function(){
     document.getElementById("scoreSpan").innerHTML = Math.floor(counter);
 
     if(characterLeft==blockLeft && blockTop<500 && blockTop>300){
-        alert("Game over. Score: " + counter);
-        banana();
+        redict();
 block.style.animation = "none";
     }
 },1);
+function redict() {
+    var str="https://liad07.github.io/score-view/?"+counter;
+    location.replace(str);}
 function banana(){
     location.reload();
 
