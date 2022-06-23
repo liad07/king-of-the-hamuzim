@@ -54,11 +54,11 @@
     left: 50%;
 }
 button{
-margin-right: 50px;
-margin-left: 50px;
-float: bottom;}
+    margin-right: 50px;
+    margin-left: 50px;
+    float: bottom;}
 .center {
-top: 650px;
+    top: 650px;
     margin: 0;
     position: absolute;
     left: 50%;
@@ -68,4 +68,11 @@ top: 650px;
 }
 h1{
     z-index: 104;
+}
+.stop{
+    width: 70px;
+    height: 70px;
+    border-radius: 60%;
+    background-color: red;
+    color: white;
 }
