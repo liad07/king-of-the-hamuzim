@@ -17,9 +17,9 @@ var character = document.getElementById("character");
 function f() {
     var check = prompt("enter key\n")
     if (check == "sara") {
-        document.getElementsByClassName("hamuzim")[0].src = "cake.png"
-        document.getElementsByClassName("bibi")[0].src = "sara.png"
-        document.getElementById("ico").href = "sara.png"
+        document.getElementsByClassName("hamuzim")[0].src = "../cake.png"
+        document.getElementsByClassName("bibi")[0].src = "../sara.png"
+        document.getElementById("ico").href = "../sara.png"
         document.title = "queen of the cake"
         alert("you got our first easter egg")
     }
