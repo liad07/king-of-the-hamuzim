@@ -118,12 +118,12 @@ function update() {
         }, 0.1);
         document.getElementById("rank").textContent="professional"
     }
-if (counter>444){
+if (counter>document.getElementById("record").value){
     document.getElementById("record").textContent=("you broke our record please send me the record after you finish play")
     }
 }
 function redict() {
-    var str = "https://liad07.github.io/score-view/?score=" + counter+"&mode="+mode+"&from="+window.location.href.replace("/game","");
+    var str = "https://liad07.github.io/score-view/?score=" + counter+"&mode="+mode+"&from="+window.location.href;
     location.replace(str);
 }
 
@@ -141,4 +141,21 @@ function stopgame() {
 2.easter egg done
 3.resume/stop game done
 */
+setInterval(myTimer, 1000);
+var sec=0;
+var min=0;
+function myTimer() {
+    sec++;
+    sec=checkTime(sec)
+    if (sec==60){
+        min++
+        sec=0;
+    }
+    document.getElementById("time").innerHTML = min+":"+sec;
+}
+
 document.getElementById("record").textContent="444";
+function checkTime(i) {
+    if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
+    return i;
+}
