@@ -123,7 +123,7 @@ if (counter>document.getElementById("record").value){
     }
 }
 function redict() {
-    var str = "https://liad07.github.io/score-view/?score=" + counter+"&mode="+mode+"&from="+window.location.href.replace("/game/","");
+    var str = "https://liad07.github.io/score-view/?score=" + counter+"&mode="+mode+"&from="+window.location.href.replace("/game","");
     location.replace(str);
 }
 
