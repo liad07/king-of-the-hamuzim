@@ -118,12 +118,12 @@ function update() {
         }, 0.1);
         document.getElementById("rank").textContent="professional"
     }
-if (counter>document.getElementById("record").value){
+if (counter>444){
     document.getElementById("record").textContent=("you broke our record please send me the record after you finish play")
     }
 }
 function redict() {
-    var str = "https://liad07.github.io/score-view/?score=" + counter+"&mode="+mode+"&from="+window.location.href;
+    var str = "https://liad07.github.io/score-view/?score=" + counter+"&mode="+mode+"&from="+window.location.href.replace("/game/","");
     location.replace(str);
 }
 
