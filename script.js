@@ -12,6 +12,7 @@ document.addEventListener("keydown", event => {
         stopgame();
     }
 });
+var mode=document.title
 var character = document.getElementById("character");
 
 function f() {
@@ -21,6 +22,7 @@ function f() {
         document.getElementsByClassName("bibi")[0].src = "../sara.png"
         document.getElementById("ico").href = "../sara.png"
         document.title = "queen of the cake"
+        mode=document.title
         alert("you got our first easter egg")
     }
 }
@@ -72,7 +74,7 @@ function update() {
 
     }
 //medium
-    else if (counter > 75) {
+    else if (counter > 75&&counter<150) {
         document.getElementById("rank").textContent="medium"
         setInterval(function () {
             var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
@@ -87,7 +89,7 @@ function update() {
         }, 0.5);
     }
 //hard
-    else if (counter > 150) {
+    else if (counter > 150&&counter<400) {
         setInterval(function () {
             var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
             var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
@@ -102,7 +104,7 @@ function update() {
         document.getElementById("rank").textContent="hard"
     }
 //professional
-    else if (counter > 400) {
+    else if (counter > 400&&counter<444) {
         setInterval(function () {
             var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
             var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
@@ -121,7 +123,7 @@ if (counter>document.getElementById("record").value){
     }
 }
 function redict() {
-    var str = "https://liad07.github.io/score-view/?" + counter;
+    var str = "https://liad07.github.io/score-view/?score=" + counter+"&mode="+mode+"&from="+window.location.href;
     location.replace(str);
 }
 
