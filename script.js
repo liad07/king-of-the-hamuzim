@@ -11,6 +11,9 @@ document.addEventListener("keydown", event => {
     if (event.key === "s") {
         stopgame();
     }
+       if (event.key === "h") {
+        document.getElementById("ishack").content="hack"
+    } 
 });
 var mode=document.title
 var character = document.getElementById("character");
@@ -47,7 +50,7 @@ var block = document.getElementById("block");
 var counter = 0;
 block.addEventListener('animationiteration', () => {
     var random = Math.floor(Math.random() * 3);
-    console.log(random)
+    document.getElementById("random").content=random
     left = random * 100;
     block.style.left = left + "px";
     counter++;
